@@ -3,3 +3,88 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.nav {
+  background-color: rgb(18, 71, 18);
+}
+
+.nav li {
+  display: inline-block;
+  padding: 15px;
+}
+
+.nav li:hover {
+  background-color: green;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+.wrapper {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.sensors {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(18, 71, 18);
+  width: auto;
+  order: -1;
+}
+
+.sensors li {
+  padding: 15px;
+}
+
+.sensors li:hover {
+  background-color: green;
+}
+
+.sensors li a {
+  text-decoration: none;
+  color: white;
+}
+
+.sensor {
+  margin: 10px;
+  padding: 10px;
+  flex: 1;
+
+  background-color: rgb(199, 159, 127);
+}
+
+.sensor li, .sensors li {
+  list-style-type: none;
+}
+
+.sensor li {
+  margin: 15px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.sensor li span {
+  padding: 4px;
+  margin: 10px;
+  border: 1px solid black;
+  background-color: rgb(141, 97, 97);
+  min-width: 200px;
+}
+
+.historique li:first-child::before {
+  display: block;
+  font-weight: bold;
+  content:"Historique : ";
+  text-align: left;
+}
+
+ /* Responsive (fenêtres de moins de 640px) */
+ @media (max-width: 640px) {
+  .wrapper {
+    /* affichage vertical */
+    flex-direction: column;
+  }
+}
